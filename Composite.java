@@ -1,23 +1,37 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-public class Composite implements CompositeInterface {
+class Composite implements CompositeInterface
+{
+	
+	ArrayList<String> multitodo= new ArrayList<String>();
+	String singleTodo;
 
-	String onetodo;
-	ArrayList<String> multitodo=  new ArrayList<String>();
-	public Composite(String newtodo)
-	{
-		this.onetodo= newtodo;
-		this.multitodo=new ArrayList<Composite>;
+	Composite(String singleToDo){
+		this.singleTodo=singleToDo;
+		this.multitodo= new ArrayList<String>();
+	
 	}
-	public String getToDo()
-	{
-		return onetodo;
 
+	
+	@Override
+	
+	public String getToDo() {
+		// TODO Auto-generated method stub
+		return singleTodo;
 	}
-	public ArrayList<String> multiToDo() {
-		
-		return multitodo;
+
+	
+	
+
+
+	@Override
+	public void addTask()
+	{
+		multitodo.add(singleTodo);
+		for(String task:multitodo)
+		{
+			System.out.println(task);
+		}
 	}
 	
 	
