@@ -5,10 +5,10 @@ public class Composite implements CompositeInterface {
 
 	String onetodo;
 	ArrayList<String> multitodo=  new ArrayList<String>();
-	public Composite(String newtodo,  ArrayList<String >newmultitodo)
+	public Composite(String newtodo)
 	{
 		this.onetodo= newtodo;
-		this.multitodo=newmultitodo;
+		this.multitodo=new ArrayList<Composite>;
 	}
 	public String getToDo()
 	{
