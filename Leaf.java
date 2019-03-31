@@ -10,16 +10,23 @@ public class Leaf implements CompositeInterface {
 	public String getToDo() {
 		
 		return todotask2;
+		
 	}
 
 	
 	
 	@Override
-	public void addTask() {
+	public void addTask(CompositeInterface task) {
 		// TODO Auto-generated method stub
-		getToDo();
+		//getToDo();
+	}
+		
+
+	@Override
+	public void printfun() {
+		// TODO Auto-generated method stub
 		System.out.println(getToDo());
+	}
 	}
 	
 
-}	
