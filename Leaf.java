@@ -13,9 +13,13 @@ public class Leaf implements CompositeInterface {
 	}
 
 	
-	public ArrayList<String> multiToDo() {
-		
-		return null;
+	
+	@Override
+	public void addTask() {
+		// TODO Auto-generated method stub
+		getToDo();
+		System.out.println(getToDo());
 	}
+	
 
-}
+}	
