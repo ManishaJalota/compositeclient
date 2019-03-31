@@ -3,12 +3,13 @@ import java.util.*;
 class Composite implements CompositeInterface
 {
 	
-	ArrayList<String> multitodo= new ArrayList<String>();
+	ArrayList<CompositeInterface> multitodo= new ArrayList<CompositeInterface>();
 	String singleTodo;
 
-	Composite(String singleToDo){
+	Composite(String singleToDo)
+	{
 		this.singleTodo=singleToDo;
-		this.multitodo= new ArrayList<String>();
+		this.multitodo= new ArrayList<CompositeInterface>();
 	
 	}
 
@@ -25,12 +26,18 @@ class Composite implements CompositeInterface
 
 
 	@Override
-	public void addTask()
+	public void addTask(CompositeInterface singleTask) 
 	{
-		multitodo.add(singleTodo);
-		for(String task:multitodo)
+		multitodo.add(singleTask);
+		
+}
+	public void printfun() 
+	{
+		System.out.println(singleTodo);
+		for( CompositeInterface task: multitodo)
 		{
-			System.out.println(task);
+			task.printfun();
+			
 		}
 	}
 	
